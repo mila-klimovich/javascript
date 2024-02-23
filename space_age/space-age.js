@@ -1,4 +1,4 @@
-export default (planet, time) => {
+const age = (planet, time) => {
   let spaceAge;
 
   switch (planet) {
@@ -31,3 +31,5 @@ export default (planet, time) => {
   }
   return parseFloat(spaceAge.toFixed(2));
 };
+
+export { age };

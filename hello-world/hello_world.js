@@ -1,5 +1,3 @@
-
-export function hello(ratePerHour) {
+export default function hello() {
   return 'Hello World';
 }
-

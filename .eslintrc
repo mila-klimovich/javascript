@@ -15,7 +15,8 @@
     "prefer-arrow-callback": 0,
     "mocha/prefer-arrow-callback": 2,
     "import/prefer-default-export": "off",
-    "linebreak-style": 0
+    "linebreak-style": 0,
+    "max-classes-per-file": "off"
   },
   "extends": ["airbnb", "plugin:mocha/recommended"],
   "plugins": [

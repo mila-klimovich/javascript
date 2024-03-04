@@ -1,8 +1,20 @@
+const generateTwoRandomLetters = () => {
+  const randomLetter1 = String.fromCharCode(
+    Math.floor(Math.random() * 26) + 65,
+  );
+  const randomLetter2 = String.fromCharCode(
+    Math.floor(Math.random() * 26) + 65,
+  );
+  return randomLetter1 + randomLetter2;
+};
+
+const generateRandomNumber = () => Math.floor(Math.random() * (999 - 100 + 1)) + 100;
+
+const generateRobotName = () => generateTwoRandomLetters() + generateRandomNumber().toString();
+
 export class Robot {
   constructor() {
-    this.pName = String.fromCharCode(Math.floor(Math.random() * (90 - 65 + 1)) + 65)
-    + String.fromCharCode(Math.floor(Math.random() * (90 - 65 + 1)) + 65)
-    + (Math.floor(Math.random() * (999 - 100 + 1)) + 100).toString();
+    this.pName = generateRobotName();
   }
 
   get name() {
@@ -14,9 +26,7 @@ export class Robot {
   reset() {
     this.pName = '';
     do {
-      this.pName = String.fromCharCode(Math.floor(Math.random() * (90 - 65 + 1)) + 65)
-      + String.fromCharCode(Math.floor(Math.random() * (90 - 65 + 1)) + 65)
-      + (Math.floor(Math.random() * (999 - 100 + 1)) + 100).toString();
+      this.pName = generateRobotName();
     } while (this.arr.includes(this.pName));
     this.arr.push(this.pName);
   }

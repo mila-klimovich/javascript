@@ -30,9 +30,9 @@ export const transpose = (array) => {
       if (array[i][j]) {
         temp += array[i][j];
       } else if (
-        i < longestStrIndex ||
-        (array[i + 1] && j < array[i + 1].length) ||
-        j < array[array.length - 1].length
+        i < longestStrIndex
+        || (array[i + 1] && j < array[i + 1].length)
+        || j < array[array.length - 1].length
       ) {
         temp += ' ';
       }

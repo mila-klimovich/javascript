@@ -20,7 +20,7 @@ const calcLongestStrIndex = (arr) => {
 
 export const transpose = (array) => {
   const expectedArrLength = calcExpectedArrLength(array);
-  const newArray = [];
+  const expectedArr = [];
   let temp = '';
   const longestStrIndex = calcLongestStrIndex(array);
 
@@ -36,8 +36,8 @@ export const transpose = (array) => {
       ) {
         temp += ' ';
       }
-      newArray[j] = temp;
+      expectedArr[j] = temp;
     }
   }
-  return newArray;
+  return expectedArr;
 };
